@@ -25,9 +25,9 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-## Jiwei Sun
 
-I am **Jiwei Sun**, a PhD researcher in Faculty of Education at University of Macau. My research focuses on computational thinking (CT), collaborative learning, and science/STEM education in K–12 education. My main research work explored how to help students learning computational thinking skills in K-12 education.
+I am **Jiwei Sun(孙稷威)**, a PhD researcher in Faculty of Education at University of Macau. My research focuses on computational thinking (CT), collaborative learning, and science/STEM education in K–12 education. My main research work explored how to help students learning computational thinking skills in K-12 education.
+
 
 ## Research Interests
 
@@ -35,6 +35,7 @@ I am **Jiwei Sun**, a PhD researcher in Faculty of Education at University of Ma
 - Collaborative learning
 - Educational technology 
 - Science/STEM education
+
 
 ## Prefered Methods
 
