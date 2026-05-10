@@ -493,18 +493,18 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=8lP07gUAAAAJ", "_blank");
         },
       },{
-        id: 'social-researchgate',
-        title: 'ResearchGate',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.researchgate.net/profile/Jiwei-Sun-2/", "_blank");
-        },
-      },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
         handler: () => {
           window.open("https://orcid.org/0009-0005-2501-2686", "_blank");
+        },
+      },{
+        id: 'social-researchgate',
+        title: 'Researchgate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Jiwei-Sun-2/", "_blank");
         },
       },{
       id: 'light-theme',
