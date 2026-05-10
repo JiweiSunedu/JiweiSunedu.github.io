@@ -3,8 +3,8 @@ layout: about
 title: About
 permalink: /
 subtitle: PhD in Education | <a href='#'>University of Macau</a>
-MA in Education | <a href='#'>University College London</a>
-BE in Electronic Engineering | <a href='#'>Hohai University</a>
+subtitle: MA in Education | <a href='#'>University College London</a>
+subtitle: BE in Electronic Engineering | <a href='#'>Hohai University</a>
 
 profile:
   align: right
