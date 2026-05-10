@@ -68,6 +68,10 @@ body.sticky-bottom-footer {
   min-width: 0;
 }
 
+.about-main-text {
+  margin-top: 1.5rem;
+}
+
 .about-profile {
   width: 240px;
   flex-shrink: 0;
@@ -76,5 +80,17 @@ body.sticky-bottom-footer {
 
   img {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-header-row {
+    display: block;
+  }
+
+  .about-profile {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
   }
 }
