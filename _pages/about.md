@@ -2,10 +2,10 @@
 layout: about
 title: About
 permalink: /
-subtitle: {PhD in Education | <a href='#'>University of Macau</a>
-MA in Education | <a href='#'>University College London</a>
-BE in Electronic Engineering | <a href='#'>Hohai University</a>
-}
+subtitle: >
+  PhD in Education | <a href='#'>University of Macau</a><br>
+  MA in Education | <a href='#'>University College London</a><br>
+  BE in Electronic Engineering | <a href='#'>Hohai University</a>
 profile:
   align: right
   image: prof_pic.jpg
@@ -29,7 +29,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am **Jiwei Sun(孙稷威)**, a PhD researcher in Faculty of Education at University of Macau. My research focuses on computational thinking (CT), collaborative learning, and science/STEM education in K–12 education. My main research work explored how to help students learning computational thinking skills in K-12 education.
+I am **Jiwei Sun (孙稷威)**, a PhD researcher in Faculty of Education at University of Macau. My research focuses on computational thinking (CT), collaborative learning, and science/STEM education in K–12 education. My main research work explored how to help students learning computational thinking skills in K-12 education.
 
 
 ## Research Interests
