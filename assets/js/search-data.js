@@ -486,25 +486,25 @@ ninja.data = [{
           window.open("mailto:%79%63%34%37%31%30%34@%75%6D.%65%64%75.%6D%6F", "_blank");
         },
       },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=8lP07gUAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Jiwei-Sun-2/", "_blank");
+        },
+      },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
         handler: () => {
           window.open("https://orcid.org/0009-0005-2501-2686", "_blank");
-        },
-      },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=8lP07gUAAAAJ&hl", "_blank");
-        },
-      },{
-        id: 'social-researchgate',
-        title: 'Researchgate',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.researchgate.net/profile/Jiwei-Sun-2?ev=hdr_xprf", "_blank");
         },
       },{
       id: 'light-theme',
