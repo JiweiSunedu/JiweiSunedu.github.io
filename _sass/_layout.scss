@@ -56,3 +56,36 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+.about-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.about-title-block {
+  flex: 1;
+}
+
+.about-profile {
+  width: 260px;
+  flex-shrink: 0;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-header-row {
+    display: block;
+  }
+
+  .about-profile {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
