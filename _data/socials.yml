@@ -2,14 +2,21 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 # cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
-email: yc47104@um.edu.mo # your email address
+# email: yc47104@um.edu.mo # your email address
 # inspirehep_id: 1010907 # Inspire HEP author ID
 # rss_icon: true # comment this line to hide the RSS icon
-orcid_id: 0009-0005-2501-2686
-scholar_userid: 8lP07gUAAAAJ&hl # your Google Scholar ID
+#orcid_id: 0009-0005-2501-2686
+#scholar_userid: 8lP07gUAAAAJ&hl # your Google Scholar ID
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-researchgate:
-  logo: https://www.researchgate.net/favicon.ico
-  title: ResearchGate
-  url: https://www.researchgate.net/profile/Jiwei-Sun-2?ev=hdr_xprf
+#researchgate:
+ # logo: https://www.researchgate.net/favicon.ico
+#  title: ResearchGate
+ # url: https://www.researchgate.net/profile/Jiwei-Sun-2?ev=hdr_xprf
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+
+email: yc47104@um.edu.mo
+scholar_userid: 8lP07gUAAAAJ
+research_gate_profile: Jiwei-Sun-2
+orcid_id: 0009-0005-2501-2686
