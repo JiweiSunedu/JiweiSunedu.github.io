@@ -2,7 +2,10 @@
 layout: about
 title: About
 permalink: /
-subtitle: PhD Researcher in Computational Thinking, Science/STEM Education, Educational Technology| <a href='#'>University of Macau</a>. 
+subtitle: PhD in Education | <a href='#'>University of Macau</a>
+MA in Education | <a href='#'>University College London</a>
+BE in Electronic Engineering | <a href='#'>Hohai University</a>
+
 profile:
   align: right
   image: prof_pic.jpg
