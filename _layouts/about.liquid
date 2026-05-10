@@ -1,21 +1,23 @@
 ---
 layout: default
 ---
-<div class="about-title-block">
-  <h1 class="post-title">
-    {% if site.title == 'blank' %}
-      <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-      {{ site.last_name }}
-    {% else %}
-      {{ site.title }}
-    {% endif %}
-  </h1>
-  <p class="desc">{{ page.subtitle }}</p>
+<div class="post">
+  <header class="post-header about-header-row">
+    <div class="about-title-block">
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      <p class="desc">{{ page.subtitle }}</p>
 
-  <div class="clearfix about-main-text">
-    {{ content }}
-  </div>
-</div>
+      <div class="clearfix about-main-text">
+        {{ content }}
+      </div>
+    </div>
 
     {% if page.profile %}
       <div class="profile about-profile">
@@ -26,7 +28,7 @@ layout: default
           {% else %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) 260px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) 240px, (min-width: 576px) 30vw, 95vw{% endcapture %}
           {%
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
@@ -40,8 +42,6 @@ layout: default
   </header>
 
   <article>
-    
-
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
@@ -70,7 +70,6 @@ layout: default
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% social_links %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
