@@ -1,0 +1,67 @@
+name: Jiwei Sun
+first_name: Jiwei
+last_name: Sun
+chinese_name: 孙稷威
+role: PhD Researcher in Education
+department: Faculty of Education
+university: University of Macau
+location: Macau, China
+portrait: /assets/img/prof_pic.jpg
+email: yc47104@um.edu.mo
+scholar: https://scholar.google.com/citations?user=8lP07gUAAAAJ
+orcid: https://orcid.org/0009-0005-2501-2686
+researchgate: https://www.researchgate.net/profile/Jiwei-Sun-2/
+description: Jiwei Sun studies computational thinking, collaborative learning, and science/STEM education in K–12 settings.
+intro: >-
+  I study how students develop computational thinking through programming,
+  collaboration, and science/STEM learning.
+about:
+  - >-
+    I am a PhD researcher in the Faculty of Education at the University of Macau.
+    My research focuses on computational thinking (CT), collaborative learning,
+    and science/STEM education in K–12 settings.
+  - >-
+    I examine both learning processes and outcomes, with attention to instructional
+    design and students’ interactions during computational problem solving.
+    My work combines quantitative and qualitative methods.
+research:
+  - title: Computational thinking
+    text: Teaching and learning through programming, computational problem solving, and the design of learning activities.
+  - title: Collaborative learning
+    text: Students’ interactions, reasoning, and problem-solving processes as they work together.
+  - title: Science/STEM education
+    text: Connecting computational approaches with subject learning in K–12 education.
+  - title: Educational technology
+    text: Understanding how digital tools and instructional design support learning processes and outcomes.
+methods:
+  - Qualitative content analysis
+  - Cluster analysis
+  - Lag sequential analysis
+  - Epistemic network analysis
+  - Structural equation modeling
+  - Machine learning
+software: Python · R · SPSS
+education:
+  - institution: University of Macau
+    degree: PhD in Education
+    note: In progress
+  - institution: University College London
+    degree: MA in Education
+    note: ""
+  - institution: Hohai University
+    degree: BEng in Electronic Engineering
+    note: ""
+# This selected record comes from your existing _bibliography/papers.bib.
+# Update this list when changing the publications featured on the homepage.
+# The full Publications page continues to use your existing BibTeX file.
+publications:
+  - year: 2026
+    title: "Teaching computational thinking skills through Scratch in K–12 education: A systematic review"
+    authors: Sun, J., Wang, R., & Wei, B.
+    journal: Journal of Computer Assisted Learning
+    volume: "42"
+    issue: "2"
+    article: e70230
+    doi: https://doi.org/10.1002/jcal.70230
+    pdf: https://onlinelibrary.wiley.com/doi/pdf/10.1002/jcal.70230
+contact: I welcome discussions and research collaborations related to computational thinking, collaborative learning, and science/STEM education.

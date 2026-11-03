@@ -1,47 +1,53 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem;">
-    <div style="flex: 1; min-width: 0;">
-      <h1 class="post-title">
-        {% if site.title == 'blank' %}
-          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-          {{ site.last_name }}
-        {% else %}
-          {{ site.title }}
-        {% endif %}
-      </h1>
+<div class="post about-page">
+  <header class="home-intro">
+  <div class="home-intro-text">
+    <h1 class="home-name">
+      {{ site.first_name }} {{ site.last_name }}
+      <span class="home-name-chinese" lang="zh-Hans">孙稷威</span>
+    </h1>
 
-      <p class="desc">{{ page.subtitle }}</p>
+    <p class="home-position">
+      {{ page.subtitle }}
+    </p>
 
-      <div class="clearfix" style="margin-top: 1.5rem;">
-        {{ content }}
-      </div>
+    <div class="home-summary">
+      {{ page.hero_intro | markdownify }}
     </div>
 
-    {% if page.profile %}
-      <div class="profile" style="width: 240px; min-width: 240px; margin-left: 2rem;">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) 240px, (min-width: 576px) 30vw, 95vw{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
+    <nav class="home-links" aria-label="Profile links">
+      <a href="{{ '/publications/' | relative_url }}">
+        Publications
+      </a>
+      <a href="https://scholar.google.com/citations?user=8lP07gUAAAAJ">
+        Google Scholar
+      </a>
+      <a href="mailto:yc47104@um.edu.mo">
+        Email
+      </a>
+    </nav>
+  </div>
 
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-  </header>
+  {% if page.profile.image %}
+    <div class="home-portrait-frame">
+      {% assign portrait_path = page.profile.image | prepend: 'assets/img/' %}
+      {% include figure.liquid
+        loading="eager"
+        path=portrait_path
+        class="home-portrait"
+        sizes="(min-width: 768px) 300px, 70vw"
+        alt="Portrait of Jiwei Sun"
+        cache_bust=true
+      %}
+    </div>
+  {% endif %}
+</header>
+
+  <div class="about-body">
+    {{ content }}
+  </div>
 
   <article>
     <!-- News -->
