@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "About",
+    id: "nav-jiwei-sun-孙稷威",
+    title: "Jiwei Sun | 孙稷威",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
