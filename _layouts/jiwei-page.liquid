@@ -1,0 +1,16 @@
+---
+layout: jiwei-base
+---
+{%- assign i18n = site.data.jiwei_i18n -%}
+{%- assign heading_en = page.title_en | default: page.title -%}
+{%- assign heading_zh = page.title_zh | default: heading_en -%}
+      {%- if page.journal_tabs %}{% include jiwei_journal_tabs.liquid %}{% endif %}
+      <section class="page-head">
+        <h1 class="page-title" data-en="{{ heading_en | escape }}" data-zh="{{ heading_zh | escape }}">{{ heading_en }}</h1>
+        {%- assign intro_en = page.intro_en | default: '' %}
+        {%- assign intro_zh = page.intro_zh | default: intro_en %}
+        {%- if intro_en != '' %}
+        <p class="page-intro" data-en="{{ intro_en | escape }}" data-zh="{{ intro_zh | escape }}">{{ intro_en }}</p>
+        {%- endif %}
+      </section>
+      {{ content }}

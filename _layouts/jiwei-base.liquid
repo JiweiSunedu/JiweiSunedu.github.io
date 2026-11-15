@@ -1,0 +1,160 @@
+<!doctype html>
+{%- assign i18n = site.data.jiwei_i18n -%}
+{%- assign home = site.data.jiwei_home -%}
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_description = page.description | default: site.description | strip_newlines -%}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title | escape }}</title>
+    <meta name="description" content="{{ page_description | escape }}">
+    <meta name="theme-color" content="#fff5eb">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:description" content="{{ page_description | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ home.portrait | absolute_url }}">
+    {%- if site.google_site_verification %}
+    <meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">
+    {%- endif %}
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23a54b18'/%3E%3Ctext x='32' y='43' text-anchor='middle' fill='white' font-family='Georgia' font-size='34'%3EJS%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/jiwei-home.css' | relative_url | bust_file_cache }}">
+    <link rel="stylesheet" href="{{ '/assets/css/jiwei-pages.css' | relative_url | bust_file_cache }}">
+    <script>
+      /* Apply saved colour theme and language before first paint to avoid a flash. */
+      (function () {
+        try {
+          var theme = localStorage.getItem('jiwei-home-theme');
+          if (theme !== 'dark' && theme !== 'light') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.classList.add('js');
+          var lang = localStorage.getItem('jiwei-lang');
+          if (lang === 'zh' || lang === 'en') {
+            document.documentElement.dataset.lang = lang;
+            document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+          }
+        } catch (error) {}
+      })();
+    </script>
+    <script src="{{ '/assets/js/jiwei-site.js' | relative_url | bust_file_cache }}" defer></script>
+    <script src="{{ '/assets/js/jiwei-citations.js' | relative_url | bust_file_cache }}" defer></script>
+    {%- if page.journals_table %}
+      <script src="{{ '/assets/js/jiwei-journals.js' | relative_url | bust_file_cache }}" defer></script>
+    {%- endif %}
+    {%- if page.publications_filter %}
+      <script src="{{ '/assets/js/jiwei-publications.js' | relative_url | bust_file_cache }}" defer></script>
+    {%- endif %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="{{ i18n.skip.en | escape }}" data-zh="{{ i18n.skip.zh | escape }}">{{ i18n.skip.en }}</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Jiwei Sun">JS<span class="wordmark-dot">.</span></a>
+        <div class="nav-tools">
+          <button
+            class="icon-button"
+            id="search-toggle"
+            type="button"
+            aria-controls="search-overlay"
+            aria-expanded="false"
+            data-en-label="{{ i18n.search.en | escape }} (Ctrl K)"
+            data-zh-label="{{ i18n.search.zh | escape }}（Ctrl K）"
+            aria-label="{{ i18n.search.en }}"
+          >
+            <svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12.8 12.8 17 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <button
+            class="lang-toggle"
+            id="lang-toggle"
+            type="button"
+            aria-pressed="false"
+            data-en-label="{{ i18n.lang_switch.en | escape }}"
+            data-zh-label="{{ i18n.lang_switch.zh | escape }}"
+          >
+            <span class="lang-option" data-lang-option="zh" aria-hidden="true">中</span>
+            <span class="lang-sep" aria-hidden="true">/</span>
+            <span class="lang-option" data-lang-option="en" aria-hidden="true">EN</span>
+          </button>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            data-en-dark-label="{{ i18n.theme_dark.en | escape }}"
+            data-zh-dark-label="{{ i18n.theme_dark.zh | escape }}"
+            data-en-light-label="{{ i18n.theme_light.en | escape }}"
+            data-zh-light-label="{{ i18n.theme_light.zh | escape }}"
+          >
+            <span aria-hidden="true">◐</span>
+          </button>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span data-en="{{ i18n.menu.en | escape }}" data-zh="{{ i18n.menu.zh | escape }}">{{ i18n.menu.en }}</span>
+          <span aria-hidden="true">☰</span>
+        </button>
+        <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+          {%- for item in site.data.jiwei_nav %}
+            {%- assign current = false %}
+            {%- if page.url == item.url %}{% assign current = true %}{% endif %}
+            <a
+              href="{{ item.url | relative_url }}"
+              data-en="{{ item.en | escape }}"
+              data-zh="{{ item.zh | escape }}"
+              {% if current %}aria-current="page"{% endif %}
+            >{{ item.en }}</a>
+          {%- endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-wrap">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>{{ home.name | escape }} · <span lang="zh-Hans">{{ home.chinese_name | escape }}</span></span>
+        <a href="#main" data-en="{{ i18n.back_to_top.en | escape }}" data-zh="{{ i18n.back_to_top.zh | escape }}">{{ i18n.back_to_top.en }}</a>
+      </div>
+    </footer>
+
+    <div
+      class="search-overlay"
+      id="search-overlay"
+      hidden
+      data-search-url="{{ '/search.json' | relative_url }}"
+      data-en-empty="{{ i18n.search_empty.en | escape }}"
+      data-zh-empty="{{ i18n.search_empty.zh | escape }}"
+      data-en-hint="{{ i18n.search_hint.en | escape }}"
+      data-zh-hint="{{ i18n.search_hint.zh | escape }}"
+    >
+      <div class="search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-title">
+        <h2 class="sr-only" id="search-title">{{ i18n.search.en }}</h2>
+        <div class="search-field">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12.8 12.8 17 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input
+            id="search-input"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            aria-controls="search-results"
+            data-en-placeholder="{{ i18n.search_placeholder.en | escape }}"
+            data-zh-placeholder="{{ i18n.search_placeholder.zh | escape }}"
+            data-en-label="{{ i18n.search.en | escape }}"
+            data-zh-label="{{ i18n.search.zh | escape }}"
+            placeholder="{{ i18n.search_placeholder.en }}"
+          >
+          <button class="search-close" id="search-close" type="button" aria-label="Close search">Esc</button>
+        </div>
+        <ul class="search-results" id="search-results"></ul>
+        <p class="search-status" id="search-status" data-en="{{ i18n.search_hint.en | escape }}" data-zh="{{ i18n.search_hint.zh | escape }}">{{ i18n.search_hint.en }}</p>
+      </div>
+    </div>
+  </body>
+</html>

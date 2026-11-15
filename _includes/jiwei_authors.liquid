@@ -1,0 +1,18 @@
+{%- comment -%}
+  Renders an author list from _data/jiwei_publications.yml.
+  Usage: {% include jiwei_authors.liquid paper=paper marks=true %}
+  * the author marked `me: true` is bolded
+  * `marks=true` adds 1 / * / † superscripts and needs `first_author: true`
+    on the paper and `corresponding: true` / `cofirst: true` on an author
+{%- endcomment -%}
+{%- for author in include.paper.authors -%}
+  {%- if forloop.index > 1 -%}
+    {%- if forloop.last %} &amp; {% else %}, {% endif -%}
+  {%- endif -%}
+  {%- if author.me -%}<strong>{{ author.name | escape }}</strong>{%- else -%}{{ author.name | escape }}{%- endif -%}
+  {%- if include.marks -%}
+    {%- if forloop.index == 1 and include.paper.first_author -%}<sup class="author-mark" title="First author">1</sup>{%- endif -%}
+    {%- if author.corresponding -%}<sup class="author-mark" title="Corresponding author">*</sup>{%- endif -%}
+    {%- if author.cofirst -%}<sup class="author-mark" title="Co-first author">†</sup>{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,99 @@
+---
+layout: jiwei-base
+---
+{%- assign data = site.data.ssci_journals -%}
+{%- assign extras = site.data.journal_extra -%}
+{%- assign all_tags = data | map: 'tags' | flatten | uniq | sort -%}
+      {% include jiwei_journal_tabs.liquid %}
+      <section class="page-head">
+        <h1 class="page-title" data-en="SSCI Journal Ranking" data-zh="SSCI 期刊排名">SSCI Journal Ranking</h1>
+        <p class="page-intro" data-en="Education-related SSCI journals, ranked by 2025 Journal Impact Factor." data-zh="与教育相关的 SSCI 期刊，按 2025 年影响因子排序。">Education-related SSCI journals, ranked by 2025 Journal Impact Factor.</p>
+      </section>
+
+      <div class="journal-toolbar">
+        <input
+          class="journal-search"
+          id="journal-search"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search journal, publisher or tag…"
+          aria-label="Search journals"
+        >
+        <div class="filter-bar journal-quartiles" role="group" aria-label="Filter by JCR quartile">
+          <button class="filter-chip is-active" type="button" data-quartile="all" aria-pressed="true">All</button>
+          <button class="filter-chip" type="button" data-quartile="Q1" aria-pressed="false">Q1</button>
+          <button class="filter-chip" type="button" data-quartile="Q2" aria-pressed="false">Q2</button>
+          <button class="filter-chip" type="button" data-quartile="Q3" aria-pressed="false">Q3</button>
+          <button class="filter-chip" type="button" data-quartile="Q4" aria-pressed="false">Q4</button>
+        </div>
+        <div class="journal-selects">
+          <label class="journal-select">
+            <span>Tag</span>
+            <select id="journal-tag">
+              <option value="all">All</option>
+              {%- for tag in all_tags %}
+                <option value="{{ tag | escape }}">{{ tag }}</option>
+              {%- endfor %}
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="journal-table-wrap">
+        <table class="journal-table" id="journal-table">
+          <thead>
+            <tr>
+              <th scope="col" class="is-sorted" data-sort="name" aria-sort="ascending">Journal</th>
+              <th scope="col" data-sort="jif" aria-sort="none">IF</th>
+              <th scope="col" data-sort="citescore" aria-sort="none">CiteScore</th>
+              <th scope="col" data-sort="quartile" aria-sort="none">Zone</th>
+              <th scope="col" data-sort="decision" aria-sort="none">First decision</th>
+              <th scope="col" data-sort="acceptance" aria-sort="none">Acceptance</th>
+              <th scope="col">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for journal in data %}
+              {%- assign extra = extras[journal.issn] | default: extras[journal.name] %}
+              <tr
+                data-name="{{ journal.name | escape }}"
+                data-publisher="{{ journal.publisher | escape }}"
+                data-tags="{{ journal.tags | join: '|' | escape }}"
+                data-quartile="{{ journal.quartile | escape }}"
+                data-jif="{{ journal.jif }}"
+                data-citescore="{{ extra.citescore }}"
+                data-decision="{{ extra.first_decision }}"
+                data-acceptance="{{ extra.acceptance }}"
+              >
+                <td class="journal-cell">
+                  <span class="journal-title">{{ journal.name | escape }}</span>
+                  <span class="journal-meta">{{ journal.abbr | escape }} · {{ journal.publisher | escape }}</span>
+                </td>
+                <td class="journal-if">{{ journal.jif | default: '—' }}</td>
+                <td>{{ extra.citescore | default: '—' }}</td>
+                <td><span class="zone zone-{{ journal.quartile | downcase }}">{{ journal.quartile | default: '—' }}</span></td>
+                <td>{{ extra.first_decision | default: '—' }}</td>
+                <td>{{ extra.acceptance | default: '—' }}</td>
+                <td class="journal-tags">
+                  <div class="journal-tag-list">
+                    {%- for tag in journal.tags %}<span class="tag">{{ tag | escape }}</span>{% endfor %}
+                  </div>
+                </td>
+              </tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="journal-footer">
+        <p class="journal-count" id="journal-count"></p>
+        <nav class="journal-pagination" id="journal-pagination" aria-label="Journal pages"></nav>
+      </div>
+
+      <p class="journal-disclaimer">
+        <strong>Disclaimer:</strong> These figures are provided for general reference and are compiled
+        from publicly available sources; publishers may revise their metrics at any time. Please confirm
+        each figure on the journal's own website before making any decisions. This page is refreshed
+        every six months.
+      </p>

@@ -41,27 +41,112 @@ methods:
   - Structural equation modeling
   - Machine learning
 software: Python · R · SPSS
-education:
-  - institution: University of Macau
-    degree: PhD in Education
-    note: In progress
-  - institution: University College London
-    degree: MA in Education
+# Education + work shown on one timeline. `kind` is education or work; the
+# order below is the chronological order, left to right.
+# Periods: education dates from ORCID; work periods follow from that sequence —
+# correct them here if they are off.
+timeline:
+  - kind: education
+    label: "Edu: BEng"
+    title: Hohai University
+    role: BEng in Electronic Engineering
+    period: 2015–2019
+    tags:
+      - "211 & Double First Class"
     note: ""
-  - institution: Hohai University
-    degree: BEng in Electronic Engineering
+    supervisor: ""
+  - kind: work
+    label: Work Experience
+    title: Teach For China
+    role: Voluntary Teacher (Mathematics & Computer Science)
+    period: 2019–2021
+    detail: In a Village Primary School in Guangxi Province
+  - kind: education
+    label: "Edu: MA"
+    title: University College London
+    role: MA in Education
+    period: 2021–2022
+    tags:
+      - "Top 10 in QS Ranking"
     note: ""
-# This selected record comes from your existing _bibliography/papers.bib.
-# Update this list when changing the publications featured on the homepage.
-# The full Publications page continues to use your existing BibTeX file.
-publications:
-  - year: 2026
-    title: "Teaching computational thinking skills through Scratch in K–12 education: A systematic review"
-    authors: Sun, J., Wang, R., & Wei, B.
-    journal: Journal of Computer Assisted Learning
-    volume: "42"
-    issue: "2"
-    article: e70230
-    doi: https://doi.org/10.1002/jcal.70230
-    pdf: https://onlinelibrary.wiley.com/doi/pdf/10.1002/jcal.70230
+    supervisor: ""
+  - kind: work
+    label: Work Experience
+    title: A-level Mathematics Teacher
+    period: 2022–2024
+    detail: In a Top International High School
+  - kind: education
+    label: "Edu: PhD"
+    title: University of Macau
+    role: PhD in Education
+    period: 2024–present
+    tags:
+      - "Type-A Scholarship (Full-funding)"
+    supervisor: Supervised by Prof. Wei Bing
+# Selected publications live in _data/jiwei_publications.yml (papers marked
+# `selected: true` are shown on the homepage).
 contact: I welcome discussions and research collaborations related to computational thinking, collaborative learning, and science/STEM education.
+
+# -----------------------------------------------------------------------------
+# Chinese copy for the 中/EN toggle.
+# The lists mirror the English lists above, item by item; edit them freely.
+# -----------------------------------------------------------------------------
+zh:
+  role: 教育学博士研究生
+  department: 教育学院
+  university: 澳门大学
+  location: 中国澳门
+  intro: 我研究学生如何通过编程、协作与科学/STEM 学习发展计算思维。
+  about:
+    - >-
+      我是澳门大学教育学院的博士研究生，研究聚焦计算思维（CT）、协作学习，
+      以及 K–12 科学/STEM 教育。
+    - >-
+      我同时关注学习过程与学习结果，尤其关注教学设计以及学生在计算性问题
+      解决过程中的互动。我的研究结合定量与定性方法。
+  research:
+    - title: 计算思维
+      text: 通过编程、计算性问题解决与学习活动设计来开展教与学。
+    - title: 协作学习
+      text: 学生在共同学习中的互动、推理与问题解决过程。
+    - title: 科学/STEM 教育
+      text: 将计算思维方法与 K–12 学科学习相结合。
+    - title: 教育技术
+      text: 理解数字工具与教学设计如何支持学习过程与学习结果。
+  methods:
+    - 质性内容分析
+    - 聚类分析
+    - 滞后序列分析
+    - 认知网络分析
+    - 结构方程模型
+    - 机器学习
+  timeline:
+    - label: "学历：学士"
+      title: 河海大学
+      role: 电子工程学士
+      period: 2015–2019
+      tags:
+        - "211 与双一流"
+    - label: 工作经历
+      title: 美丽中国支教
+      role: 支教教师（数学与计算机科学）
+      period: 2019–2021
+      detail: 广西乡村小学
+    - label: "学历：硕士"
+      title: 伦敦大学学院
+      role: 教育学硕士
+      period: 2021–2022
+      tags:
+        - "QS 排名前十"
+    - label: 工作经历
+      title: A-level 数学教师
+      period: 2022–2024
+      detail: 国际高中
+    - label: "学历：博士"
+      title: 澳门大学
+      role: 教育学博士
+      period: 2024–至今
+      tags:
+        - "Type-A 奖学金（全额资助）"
+      supervisor: 导师：Wei Bing 教授
+  contact: 欢迎就计算思维、协作学习与科学/STEM 教育进行交流与合作。

@@ -1,0 +1,92 @@
+# Interface strings for the custom pages. Every value is shown in English and
+# in Chinese; the 中/EN button in the header swaps them at runtime.
+skip:
+  en: Skip to content
+  zh: 跳到主要内容
+menu:
+  en: Menu
+  zh: 菜单
+search:
+  en: Search
+  zh: 搜索
+search_placeholder:
+  en: Search pages, publications and posts…
+  zh: 搜索页面、论文与博客…
+search_hint:
+  en: Type to search · ↑ ↓ to move · Enter to open · Esc to close
+  zh: 输入关键词搜索 · ↑ ↓ 选择 · Enter 打开 · Esc 关闭
+search_empty:
+  en: No results found.
+  zh: 未找到相关内容。
+theme_dark:
+  en: Switch to dark theme
+  zh: 切换到深色模式
+theme_light:
+  en: Switch to light theme
+  zh: 切换到浅色模式
+lang_switch:
+  en: Switch to Chinese
+  zh: 切换到英文
+back_to_top:
+  en: Back to top ↑
+  zh: 回到顶部 ↑
+all_publications:
+  en: All publications ↗
+  zh: 全部论文 ↗
+read_article:
+  en: Read article ↗
+  zh: 阅读原文 ↗
+publisher_pdf:
+  en: Publisher PDF ↗
+  zh: 出版社 PDF ↗
+explore_research:
+  en: Explore my research ↗
+  zh: 了解我的研究 ↗
+get_in_touch:
+  en: Get in touch ↗
+  zh: 联系我 ↗
+my_background:
+  en: My academic background ↓
+  zh: 我的学术背景 ↓
+heading_about:
+  en: About Me
+  zh: 关于我
+heading_research:
+  en: Research Interest
+  zh: 研究兴趣
+heading_publications:
+  en: Selected Publications
+  zh: 代表性论文
+heading_education:
+  en: Education & Work
+  zh: 教育与工作
+heading_contact:
+  en: Contact
+  zh: 联系方式
+heading_methods:
+  en: Methods & tools
+  zh: 研究方法与工具
+eyebrow:
+  en: Education · Computational thinking
+  zh: 教育学 · 计算思维
+publications_title:
+  en: Publications
+  zh: 论文发表
+publications_filter_label:
+  en: Filter by research field
+  zh: 按研究领域筛选
+publications_all:
+  en: All
+  zh: 全部
+publications_empty:
+  en: No publications in this field yet.
+  zh: 该领域暂无论文。
+role_first_author:
+  en: First author
+  zh: 第一作者
+role_corresponding:
+  en: Corresponding author
+  zh: 通讯作者
+role_cofirst:
+  en: Co-first author
+  zh: 共同第一作者

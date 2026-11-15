@@ -1,0 +1,874 @@
+# Metrics that are NOT in the JCR workbook, keyed by ISSN (journal name when
+# the workbook lists no ISSN).
+#
+# CiteScore / First decision / Acceptance were imported from the compiled
+# dashboard at https://frank-haoming.github.io/jrank/ — verify against the
+# publisher before citing them, and feel free to correct individual rows.
+#
+#   "0360-1315":
+#     citescore: 26.3
+#     first_decision: "7 days"
+#     acceptance: "13%"
+0002-8312:
+  citescore: '7.2'
+  first_decision: 20 days
+  acceptance: 5.4%
+0004-9441:
+  citescore: '6.3'
+  first_decision: 7 days
+  acceptance: 5.2%
+0007-1005:
+  citescore: '4.4'
+  first_decision: 3 days
+  acceptance: 5%
+0007-1013:
+  citescore: '23.1'
+  first_decision: 26 days
+  acceptance: 4%
+0009-3920:
+  citescore: '8.0'
+0010-4086:
+  citescore: '3.5'
+0013-1245:
+  citescore: '3.6'
+  first_decision: 76 days
+  acceptance: 8.4%
+0013-161X:
+  citescore: '6.9'
+  first_decision: 18 days
+  acceptance: 7.8%
+0013-1644:
+  citescore: '7.1'
+  acceptance: 7.9%
+0013-1857:
+  citescore: '4.7'
+  first_decision: 99 days
+  acceptance: 13%
+0013-1881:
+  citescore: '5.3'
+  first_decision: 8 days
+  acceptance: 3%
+0013-189X:
+  citescore: '10.0'
+  first_decision: 50 days
+  acceptance: 10.8%
+0013-1911:
+  citescore: '9.7'
+  first_decision: 5 days
+  acceptance: 4%
+0013-1954:
+  citescore: '6.7'
+  first_decision: 19 days
+0015-718X:
+  citescore: '3.7'
+  first_decision: 19 days
+  acceptance: 13%
+0017-8055:
+  citescore: '8.6'
+0017-8969:
+  citescore: '2.7'
+  first_decision: 4 days
+  acceptance: 10.0%
+0018-1560:
+  citescore: '12.2'
+  first_decision: 7 days
+0019-042X:
+  citescore: '5.4'
+0020-4277:
+  citescore: '4.9'
+  first_decision: 34 days
+0021-8251:
+  citescore: '8.2'
+0021-9266:
+  citescore: '4.1'
+  first_decision: 6 days
+  acceptance: 13%
+0022-0272:
+  citescore: '4.8'
+  first_decision: 3 days
+  acceptance: 10%
+0022-0485:
+  citescore: '2.4'
+  first_decision: 30 days
+  acceptance: 17%
+0022-0663:
+  citescore: '13.6'
+  first_decision: 23 days
+  acceptance: 9.1%
+0022-0671:
+  citescore: '2.4'
+  first_decision: 60 days
+  acceptance: 10%
+0022-0973:
+  citescore: '6.5'
+  first_decision: 6 days
+  acceptance: 11%
+0022-2208:
+  citescore: '3.1'
+0022-4294:
+  citescore: '3.8'
+  first_decision: 5 days
+  acceptance: 3.9%
+0022-4308:
+  citescore: '9.3'
+  first_decision: 13 days
+  acceptance: 6%
+0022-4391:
+  citescore: '3.6'
+  first_decision: 10 days
+  acceptance: 14%
+0022-4405:
+  citescore: '6.5'
+0022-4871:
+  citescore: '8.2'
+  first_decision: 16 days
+  acceptance: 1.6%
+0023-8333:
+  citescore: '8.6'
+  first_decision: 3 days
+  acceptance: 7%
+0026-4695:
+  citescore: '6.9'
+  first_decision: 9 days
+0031-3831:
+  citescore: '5.4'
+  first_decision: 52 days
+  acceptance: 20%
+0031-7217:
+  citescore: '1.7'
+0033-3085:
+  citescore: '3.7'
+  first_decision: 4 days
+  acceptance: 14%
+0033-6297:
+  citescore: '2.6'
+  first_decision: 69 days
+  acceptance: 16%
+0034-0553:
+  citescore: '6.3'
+  first_decision: 11 days
+  acceptance: 16%
+0034-527X:
+  citescore: '2.2'
+0034-6543:
+  citescore: '22.4'
+  first_decision: 27 days
+  acceptance: 8.3%
+0036-8326:
+  citescore: '6.5'
+  first_decision: 4 days
+  acceptance: 11%
+0038-0407:
+  citescore: '6.5'
+  acceptance: 4.0%
+0039-3746:
+  citescore: '2.0'
+  first_decision: 38 days
+0039-8322:
+  citescore: '8.6'
+  first_decision: 64 days
+  acceptance: 12%
+0040-0912:
+  citescore: '7.5'
+0040-5841:
+  citescore: '4.8'
+0042-0859:
+  citescore: '8.2'
+  first_decision: 5 days
+  acceptance: 34.3%
+0046-1520:
+  citescore: '29.7'
+  first_decision: 25 days
+  acceptance: 6%
+0046-760X:
+  citescore: '1.4'
+  first_decision: 121 days
+  acceptance: 21%
+0091-732X:
+  citescore: '6.9'
+  first_decision: 83 days
+  acceptance: 1.6%
+0092-055X:
+  citescore: '2.8'
+  acceptance: 26.4%
+0093-3104:
+  citescore: '5.3'
+  first_decision: 1 days
+  acceptance: 6%
+0095-8964:
+  citescore: '5.0'
+  first_decision: 30 days
+  acceptance: 12%
+0098-6283:
+  citescore: '4.1'
+  acceptance: 18.5%
+0104-754X:
+  citescore: '0.9'
+0119-5646:
+  citescore: '8.5'
+  first_decision: 15 days
+0141-0423:
+  citescore: '4.0'
+  first_decision: 24 days
+  acceptance: 10%
+0141-1926:
+  citescore: '5.2'
+  first_decision: 7 days
+  acceptance: 11%
+0141-6200:
+  citescore: '2.1'
+  first_decision: 85 days
+  acceptance: 22%
+0141-8211:
+  citescore: '5.0'
+  first_decision: 12 days
+  acceptance: 11%
+0142-5692:
+  citescore: '4.3'
+  first_decision: 21 days
+  acceptance: 25%
+0143-0343:
+  citescore: '4.3'
+  first_decision: 7 days
+  acceptance: 7.8%
+0144-3410:
+  citescore: '6.2'
+  first_decision: 37 days
+  acceptance: 11%
+0157-244X:
+  citescore: '7.2'
+  first_decision: 29 days
+0158-037X:
+  citescore: '5.4'
+  first_decision: 97 days
+  acceptance: 10%
+0158-7919:
+  citescore: '5.6'
+  first_decision: 46 days
+  acceptance: 5%
+0159-6306:
+  citescore: '5.1'
+  first_decision: 71 days
+  acceptance: 17%
+0161-4681:
+  citescore: '3.5'
+  first_decision: 69 days
+  acceptance: 13.6%
+0161-7761:
+  citescore: '2.6'
+  first_decision: 8 days
+  acceptance: 26%
+0162-3737:
+  citescore: '5.8'
+  first_decision: 25 days
+  acceptance: 10.5%
+0162-5748:
+  citescore: '3.5'
+0191-491X:
+  citescore: '6.6'
+  first_decision: 2 days
+  acceptance: 3%
+0195-6744:
+  citescore: '3.5'
+0218-8791:
+  citescore: '8.0'
+  first_decision: 27 days
+  acceptance: 3%
+0255-7614:
+  citescore: '4.0'
+  first_decision: 6 days
+  acceptance: 6.9%
+0256-0100:
+  citescore: '1.4'
+0260-2938:
+  citescore: '14.1'
+  first_decision: 1 days
+  acceptance: 7%
+0260-7476:
+  citescore: '3.9'
+  first_decision: 93 days
+  acceptance: 9%
+0261-4448:
+  citescore: '12.7'
+0261-9768:
+  citescore: '10.5'
+  first_decision: 141 days
+  acceptance: 8%
+0263-5143:
+  citescore: '6.8'
+  first_decision: 24 days
+  acceptance: 14%
+0265-0517:
+  citescore: '2.0'
+0266-4909:
+  citescore: '11.9'
+  first_decision: 32 days
+  acceptance: 9%
+0267-1522:
+  citescore: '6.9'
+  first_decision: 10 days
+  acceptance: 7%
+0267-6583:
+  citescore: '5.3'
+  first_decision: 10 days
+  acceptance: 10.3%
+0268-0939:
+  citescore: '8.2'
+  first_decision: 11 days
+  acceptance: 8%
+0268-1153:
+  citescore: '2.8'
+0272-7757:
+  citescore: '3.7'
+  first_decision: 4 days
+0273-5024:
+  citescore: '3.5'
+0300-4430:
+  citescore: '3.2'
+  first_decision: 4 days
+  acceptance: 14%
+0305-0068:
+  citescore: '8.2'
+0305-4985:
+  citescore: '5.9'
+  first_decision: 20 days
+  acceptance: 18%
+0305-5698:
+  citescore: '8.7'
+  first_decision: 6 days
+  acceptance: 3%
+0305-7240:
+  citescore: '5.1'
+  first_decision: 3 days
+  acceptance: 8%
+0305-7267:
+  citescore: '27.1'
+  first_decision: 18 days
+  acceptance: 4%
+0305-764X:
+  citescore: '4.8'
+  first_decision: 6 days
+  acceptance: 11%
+0305-7925:
+  citescore: '6.7'
+  first_decision: 96 days
+  acceptance: 11%
+0307-5079:
+  citescore: '11.4'
+  first_decision: 6 days
+  acceptance: 5%
+0309-8249:
+  citescore: '1.8'
+0309-8265:
+  citescore: '4.4'
+  first_decision: 64 days
+  acceptance: 34%
+0332-3315:
+  citescore: '4.5'
+  first_decision: 27 days
+  acceptance: 22%
+0346-251X:
+  citescore: '10.0'
+  first_decision: 8 days
+  acceptance: 10%
+0360-1277:
+  citescore: '2.7'
+  first_decision: 62 days
+  acceptance: 51%
+0360-1315:
+  citescore: '26.3'
+  first_decision: 7 days
+0361-0365:
+  citescore: '4.7'
+  first_decision: 7 days
+0361-476X:
+  citescore: '7.9'
+  first_decision: 23 days
+0362-6784:
+  citescore: '3.4'
+  first_decision: 26 days
+  acceptance: 13%
+0425-0494:
+  citescore: '1.9'
+  first_decision: 48 days
+  acceptance: 10%
+0729-4360:
+  citescore: '8.6'
+  first_decision: 55 days
+  acceptance: 11%
+0731-1745:
+  citescore: '4.2'
+  first_decision: 28 days
+  acceptance: 5%
+0735-6331:
+  citescore: '14.8'
+  first_decision: 14 days
+  acceptance: 4.4%
+0737-0008:
+  citescore: '7.7'
+  first_decision: 15 days
+  acceptance: 7%
+0738-0593:
+  citescore: '4.5'
+  first_decision: 12 days
+  acceptance: 5%
+0741-7136:
+  citescore: '4.3'
+  first_decision: 12 days
+  acceptance: 6.7%
+0742-051X:
+  citescore: '8.5'
+  first_decision: 6 days
+  acceptance: 8%
+0744-8481:
+  citescore: '5.8'
+  first_decision: 23 days
+  acceptance: 29%
+0790-8318:
+  citescore: '7.3'
+  first_decision: 10 days
+  acceptance: 7%
+0802-6106:
+  citescore: '3.8'
+  first_decision: 5 days
+  acceptance: 15%
+0883-0355:
+  citescore: '4.6'
+  first_decision: 2 days
+  acceptance: 5%
+0884-1241:
+  citescore: '9.6'
+  first_decision: 9 days
+  acceptance: 3%
+0885-2006:
+  citescore: '5.9'
+  first_decision: 26 days
+0888-4064:
+  citescore: '5.5'
+  first_decision: 7 days
+  acceptance: 7.2%
+0895-7347:
+  citescore: '2.7'
+  first_decision: 127 days
+  acceptance: 6%
+0895-9048:
+  citescore: '6.2'
+  first_decision: 3 days
+  acceptance: 5.6%
+0897-5264:
+  citescore: '2.5'
+0898-5898:
+  citescore: '4.3'
+  first_decision: 4 days
+  acceptance: 7%
+0899-9546:
+  citescore: '2.0'
+0922-4777:
+  citescore: '5.6'
+  first_decision: 3 days
+0924-3453:
+  citescore: '5.4'
+  first_decision: 77 days
+  acceptance: 8%
+0926-7220:
+  citescore: '6.3'
+  first_decision: 32 days
+0950-0693:
+  citescore: '5.3'
+0950-0782:
+  citescore: '5.8'
+  first_decision: 8 days
+  acceptance: 7%
+0951-0893:
+  citescore: '7.7'
+0952-8733:
+  citescore: '6.9'
+  first_decision: 3 days
+0954-0253:
+  citescore: '4.3'
+  first_decision: 12 days
+  acceptance: 11%
+0957-7572:
+  citescore: '9.4'
+  first_decision: 48 days
+0957-8234:
+  citescore: '4.6'
+0958-3440:
+  citescore: '14.9'
+0958-8221:
+  citescore: '29.7'
+  first_decision: 44 days
+  acceptance: 11%
+0959-4752:
+  citescore: '9.2'
+  first_decision: 9 days
+0969-594X:
+  citescore: '5.9'
+  first_decision: 19 days
+  acceptance: 5%
+1028-3153:
+  citescore: '7.5'
+  first_decision: 3 days
+  acceptance: 5.1%
+1040-726X:
+  citescore: '20.1'
+  first_decision: 3 days
+1040-9289:
+  citescore: '5.5'
+  first_decision: 4 days
+  acceptance: 13%
+1041-6080:
+  citescore: '6.7'
+  first_decision: 13 days
+1042-1726:
+  citescore: '15.4'
+  first_decision: 24 days
+1042-9670:
+  citescore: '3.0'
+  first_decision: 18 days
+1043-7797:
+  citescore: '3.5'
+  first_decision: 155 days
+  acceptance: 49%
+1049-4820:
+  citescore: '17.8'
+  first_decision: 12 days
+  acceptance: 10%
+1050-8406:
+  citescore: '7.5'
+  first_decision: 13 days
+  acceptance: 4%
+1057-3569:
+  citescore: '4.2'
+  first_decision: 59 days
+  acceptance: 12%
+1059-0145:
+  citescore: '10.9'
+  first_decision: 11 days
+1069-4730:
+  citescore: '12.4'
+  first_decision: 16 days
+  acceptance: 9%
+1074-9039:
+  citescore: '3.8'
+  first_decision: 95 days
+  acceptance: 17%
+1075-2935:
+  citescore: '12.1'
+  first_decision: 13 days
+  acceptance: 10%
+1076-9986:
+  citescore: '4.4'
+  first_decision: 13 days
+  acceptance: 18.7%
+1081-3004:
+  citescore: '2.2'
+  first_decision: 35 days
+  acceptance: 13%
+1082-3301:
+  citescore: '5.3'
+  first_decision: 15 days
+1086-296X:
+  citescore: '3.1'
+  first_decision: 23 days
+  acceptance: 5.6%
+1087-2981:
+  citescore: '6.6'
+  first_decision: 4 days
+  acceptance: 11%
+1088-8438:
+  citescore: '7.8'
+  first_decision: 45 days
+  acceptance: 13%
+1091-367X:
+  citescore: '4.4'
+  first_decision: 3 days
+  acceptance: 5%
+1094-3501:
+  citescore: '7.4'
+1096-7516:
+  citescore: '13.8'
+  first_decision: 12 days
+1098-6065:
+  citescore: '7.7'
+  first_decision: 3 days
+  acceptance: 4%
+1109-4028:
+  citescore: '4.5'
+1135-6405:
+  citescore: '1.6'
+1136-1034:
+  citescore: '7.6'
+  first_decision: 8 days
+  acceptance: 6%
+1138-2783:
+  citescore: '8.2'
+1139-613X:
+  citescore: '5.7'
+1175-8708:
+  citescore: '2.8'
+1176-3647:
+  citescore: '11.6'
+1350-293X:
+  citescore: '3.4'
+  first_decision: 38 days
+  acceptance: 21%
+1350-4622:
+  citescore: '7.1'
+  first_decision: 5 days
+  acceptance: 14%
+1354-0602:
+  citescore: '5.5'
+  first_decision: 31 days
+  acceptance: 7%
+1356-2517:
+  citescore: '12.2'
+  first_decision: 34 days
+  acceptance: 8%
+1356-336X:
+  citescore: '8.2'
+  first_decision: 27 days
+  acceptance: 9.3%
+1357-3322:
+  citescore: '7.2'
+  first_decision: 5 days
+  acceptance: 16%
+1359-866X:
+  citescore: '3.5'
+  first_decision: 49 days
+  acceptance: 3%
+1360-080X:
+  citescore: '6.2'
+  first_decision: 10 days
+  acceptance: 10%
+1360-144X:
+  citescore: '4.4'
+  first_decision: 16 days
+  acceptance: 12%
+1360-2357:
+  citescore: '15.5'
+  first_decision: 29 days
+1360-3116:
+  citescore: '9.0'
+  first_decision: 49 days
+  acceptance: 20%
+1361-3324:
+  citescore: '7.8'
+  first_decision: 42 days
+  acceptance: 11%
+1361-7672:
+  citescore: '2.8'
+  first_decision: 61 days
+  acceptance: 14%
+1362-1688:
+  citescore: '17.8'
+  first_decision: 5 days
+  acceptance: 12.0%
+1367-0050:
+  citescore: '8.7'
+  first_decision: 59 days
+  acceptance: 16%
+1381-2890:
+  citescore: '5.1'
+  first_decision: 4 days
+1382-4996:
+  citescore: '7.2'
+  first_decision: 16 days
+1386-4416:
+  citescore: '5.6'
+  first_decision: 17 days
+1389-224X:
+  citescore: '6.4'
+  first_decision: 39 days
+  acceptance: 14%
+1389-2843:
+  citescore: '7.6'
+  first_decision: 12 days
+1443-1394:
+  citescore: '1.0'
+1449-3098:
+  citescore: '12.0'
+1461-3808:
+  citescore: '2.5'
+  first_decision: 106 days
+  acceptance: 12%
+1466-4208:
+  citescore: '5.1'
+  first_decision: 8 days
+  acceptance: 17%
+1467-6370:
+  citescore: '9.8'
+1468-1811:
+  citescore: '4.2'
+  first_decision: 13 days
+  acceptance: 23%
+1468-7984:
+  citescore: '4.5'
+  first_decision: 2 days
+  acceptance: 13.9%
+1469-7874:
+  citescore: '13.9'
+  first_decision: 22 days
+  acceptance: 4.1%
+1470-3297:
+  citescore: '12.1'
+  first_decision: 14 days
+  acceptance: 9%
+1472-8117:
+  citescore: '14.9'
+  first_decision: 1 day
+1473-8376:
+  citescore: '9.4'
+  first_decision: 6 days
+1474-9041:
+  citescore: '6.7'
+  first_decision: 10 days
+  acceptance: 14.9%
+1475-1585:
+  citescore: '6.5'
+  first_decision: 3 days
+  acceptance: 9%
+1475-939X:
+  citescore: '7.0'
+  first_decision: 61 days
+  acceptance: 5%
+1476-8062:
+  citescore: '2.3'
+  first_decision: 77 days
+  acceptance: 12%
+1477-3880:
+  citescore: '2.9'
+  first_decision: 1 day
+1479-0718:
+  citescore: '5.8'
+  first_decision: 16 days
+  acceptance: 22%
+1492-3831:
+  citescore: '6.8'
+1534-8458:
+  citescore: '5.9'
+  first_decision: 22 days
+  acceptance: 12%
+1537-260X:
+  citescore: '11.4'
+1538-8220:
+  citescore: '3.7'
+  first_decision: 12 days
+  acceptance: 16%
+1539-1523:
+  citescore: '17.9'
+  first_decision: 59 days
+  acceptance: 4%
+1556-1607:
+  citescore: '10.9'
+  first_decision: 7 days
+1556-1623:
+  citescore: '9.4'
+  first_decision: 9 days
+1557-3060:
+  citescore: '4.2'
+1568-4555:
+  citescore: '4.7'
+  first_decision: 22 days
+1571-0068:
+  citescore: '6.2'
+  first_decision: 18 days
+1598-1037:
+  citescore: '6.3'
+  first_decision: 18 days
+1648-3898:
+  citescore: '2.5'
+1682-3206:
+  citescore: '2.9'
+1697-7467:
+  citescore: '3.5'
+1739-4341:
+  citescore: '0.8'
+1740-8989:
+  citescore: '11.9'
+  first_decision: 72 days
+  acceptance: 11%
+1741-1432:
+  citescore: '11.2'
+  first_decision: 1 days
+  acceptance: 11.0%
+1741-4350:
+  citescore: '3.7'
+  first_decision: 11 days
+  acceptance: 13%
+1743-9884:
+  citescore: '10.5'
+  first_decision: 6 days
+  acceptance: 5%
+1747-938X:
+  citescore: '20.6'
+  first_decision: 6 days
+1750-1229:
+  citescore: '13.7'
+  first_decision: 7 days
+  acceptance: 11%
+1750-8487:
+  citescore: '6.9'
+  first_decision: 24 days
+  acceptance: 10%
+1751-2271:
+  citescore: '3.6'
+  first_decision: 9 days
+  acceptance: 14%
+1836-9391:
+  citescore: '2.3'
+  first_decision: 4 days
+  acceptance: 26.1%
+1863-9690:
+  citescore: '6.5'
+  first_decision: 6 days
+1871-1502:
+  citescore: '4.0'
+  first_decision: 57 days
+1871-1871:
+  citescore: '9.2'
+  first_decision: 34 days
+  acceptance: 12%
+1873-0388:
+  citescore: '5.0'
+  first_decision: 22 days
+1874-785X:
+  citescore: '4.3'
+  first_decision: 14 days
+1874-8597:
+  citescore: '5.6'
+  first_decision: 39 days
+1931-3152:
+  citescore: '5.3'
+  first_decision: 15 days
+  acceptance: 3%
+1934-5747:
+  citescore: '4.1'
+  first_decision: 25 days
+  acceptance: 10%
+1938-8926:
+  citescore: '7.5'
+1939-1382:
+  citescore: '12.5'
+1941-5257:
+  citescore: '8.2'
+  first_decision: 13 days
+  acceptance: 10%
+2055-6365:
+  citescore: '4.2'
+  first_decision: 1 days
+  acceptance: 15.1%
+2056-9548:
+  citescore: '3.8'
+2196-7822:
+  citescore: '19.8'
+  first_decision: 7 days
+2210-6561:
+  citescore: '3.6'
+  first_decision: 12 days
+  acceptance: 4%
+2365-9440:
+  citescore: '48.4'
+  first_decision: 5 days
+2469-9896:
+  citescore: '6.8'

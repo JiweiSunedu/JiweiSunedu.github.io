@@ -1,0 +1,50 @@
+name: Update Crossref citation snapshot
+
+# Refreshes the server-rendered fallback in _data/jiwei_citations.json from
+# the Crossref API. The published page also refreshes citation counts from
+# api.crossref.org in the browser, so this only keeps the snapshot (and the
+# no-JavaScript view) current.
+#
+# Note: commits made with the default GITHUB_TOKEN do not trigger the deploy
+# workflow. If you want a rebuild after each refresh, add a PAT secret (see
+# the "Set up PAT" note in .github/workflows/update-citations.yml) and pass
+# it to actions/checkout below.
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # daily at 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-crossref:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Refresh _data/jiwei_citations.json
+        run: python bin/update_crossref_citations.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add _data/jiwei_citations.json
+          git diff --staged --quiet || (
+            git commit -m "Update Crossref citation snapshot"
+            git push
+          )

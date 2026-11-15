@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /search.json
+sitemap: false
+---
+{%- assign entries = "" | split: "" -%}
+{%- for item in site.data.jiwei_nav -%}
+  {%- assign target = site.pages | where: 'url', item.url | first -%}
+  {%- capture json -%}{"title":{{ item.en | jsonify }},"title_zh":{{ item.zh | jsonify }},"url":{{ item.url | relative_url | jsonify }},"type":"page","text":{{ target.description | default: '' | jsonify }}}{%- endcapture -%}
+  {%- assign entries = entries | push: json -%}
+{%- endfor -%}
+{%- for paper in site.data.jiwei_publications.papers -%}
+  {%- capture text -%}{{ paper.title }} {{ paper.journal }} {{ paper.year }} {{ paper.fields | join: ' ' }} {{ paper.authors | map: 'name' | join: ' ' }}{%- endcapture -%}
+  {%- capture json -%}{"title":{{ paper.title | jsonify }},"title_zh":{{ paper.title | jsonify }},"url":{{ '/publications/' | relative_url | append: '#pub-' | append: paper.id | jsonify }},"type":"publication","text":{{ text | jsonify }}}{%- endcapture -%}
+  {%- assign entries = entries | push: json -%}
+{%- endfor -%}
+{%- for post in site.posts -%}
+  {%- capture text -%}{{ post.title }} {{ post.description }} {{ post.excerpt | strip_html | strip_newlines | truncate: 200 }}{%- endcapture -%}
+  {%- capture json -%}{"title":{{ post.title | jsonify }},"title_zh":{{ post.title | jsonify }},"url":{{ post.url | relative_url | jsonify }},"type":"post","text":{{ text | jsonify }}}{%- endcapture -%}
+  {%- assign entries = entries | push: json -%}
+{%- endfor -%}
+[{{ entries | join: ',' }}]

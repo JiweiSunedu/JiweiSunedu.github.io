@@ -1,0 +1,39 @@
+# Single source of truth for the publications page and the "Selected
+# Publications" block on the homepage.
+#
+# fields:    research-field tags; they drive the filter chips on /publications/.
+#            Add a tag to `fields` below to create a new filter button.
+# selected:  true = also shown in the homepage "Selected Publications" block.
+# first_author / corresponding: role badges on the card.
+# Per-author keys: me (bold the name), corresponding (adds the * mark).
+
+fields:
+  - Computational Thinking
+  - Collaborative Learning
+  - Science/STEM Education
+  - Educational Technology
+
+papers:
+  - id: sun2026scratchreview
+    year: 2026
+    title: "Teaching computational thinking skills through Scratch in K–12 education: A systematic review"
+    authors:
+      - name: Jiwei Sun
+        me: true
+      - name: Ruobing Wang
+      - name: Bing Wei
+        corresponding: true
+    first_author: true
+    corresponding: false
+    journal: Journal of Computer Assisted Learning
+    abbr: JCAL
+    volume: "42"
+    issue: "2"
+    pages: e70230
+    doi: https://doi.org/10.1002/jcal.70230
+    html: https://onlinelibrary.wiley.com/doi/abs/10.1002/jcal.70230
+    pdf: https://onlinelibrary.wiley.com/doi/pdf/10.1002/jcal.70230
+    fields:
+      - Computational Thinking
+      - Educational Technology
+    selected: true

@@ -1,0 +1,14 @@
+# Top navigation. Each entry becomes a page link in _layouts/jiwei-base.liquid.
+# Add or reorder entries here; `url` must match the page's permalink.
+- url: /
+  en: About Me
+  zh: 关于我
+- url: /blog/
+  en: Blogs
+  zh: 博客
+- url: /publications/
+  en: Publications
+  zh: 论文发表
+- url: /journal-info/
+  en: SSCI Journal Info.
+  zh: SSCI 期刊信息

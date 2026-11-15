@@ -37,3 +37,244 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+/* Larger text and clearer reading hierarchy */
+html {
+  font-size: 112.5%;
+}
+
+body {
+  font-family:
+    "Source Sans 3",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+  font-size: 1.0556rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.post .post-title {
+  font-size: clamp(2rem, 4vw, 2.45rem);
+  margin-bottom: 0.75rem;
+}
+
+.post h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+}
+
+.post h3 {
+  font-size: 1.25rem;
+}
+
+.post p {
+  margin-bottom: 1.1rem;
+}
+
+.post li {
+  margin-bottom: 0.45rem;
+}
+
+.post .desc {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.15rem;
+}
+
+.post small,
+.post .small,
+.post .btn,
+footer.fixed-bottom,
+footer.sticky-bottom {
+  font-size: 0.9rem;
+}
+
+.publications ol.bibliography li .hidden {
+  font-size: 1rem;
+}
+
+body.fixed-top-nav {
+  padding-top: 80px;
+}
+
+/* Homepage introduction and photograph */
+.about-page .post-header {
+  align-items: center !important;
+  gap: 2rem !important;
+  margin-bottom: 2rem;
+}
+
+.about-page .profile {
+  width: 200px !important;
+  min-width: 0 !important;
+  max-width: 100%;
+  margin-left: 0 !important;
+  flex-shrink: 0;
+}
+
+.about-page .profile .more-info {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
+
+.about-page .profile .more-info p {
+  margin-bottom: 0.25rem;
+}
+
+/* Keep paragraphs at a manageable reading width */
+.about-page .about-body {
+  max-width: 68ch;
+  margin-bottom: 2rem;
+}
+
+.about-page .about-body a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* Stack the introduction and photograph on narrow screens */
+@media (max-width: 767px) {
+  .about-page .post-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .about-page .profile {
+    width: 180px !important;
+  }
+
+  .about-page .about-body {
+    max-width: 100%;
+  }
+}
+
+/* Compact homepage introduction */
+body:has(.about-page) .container[role="main"] {
+  margin-top: 1.25rem !important;
+}
+
+.about-page .home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.home-intro-text {
+  min-width: 0;
+}
+
+.about-page .home-name {
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.home-name-chinese {
+  display: block;
+  font-size: 0.52em;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  color: var(--global-theme-color);
+}
+
+.about-page .home-position {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.home-summary {
+  max-width: 48ch;
+}
+
+.about-page .home-summary p {
+  margin-bottom: 1rem;
+}
+
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.home-links a {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.home-portrait-frame {
+  width: 100%;
+}
+
+.home-portrait-frame figure,
+.home-portrait-frame picture {
+  display: block;
+  margin: 0;
+}
+
+.home-portrait-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 18px;
+}
+
+.about-page .about-body {
+  max-width: 68ch;
+  margin-top: 0;
+}
+
+.about-page .about-body > h2:first-child {
+  margin-top: 0;
+}
+
+/* Smaller screens */
+@media (max-width: 767px) {
+  .about-page .home-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .home-portrait-frame {
+    width: min(70vw, 280px);
+  }
+
+  .home-summary {
+    max-width: 100%;
+  }
+}

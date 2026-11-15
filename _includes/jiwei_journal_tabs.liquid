@@ -1,0 +1,9 @@
+<nav class="page-tabs" aria-label="SSCI journal pages">
+  {%- for tab in site.data.jiwei_journal_tabs %}
+    {%- assign active = false %}
+    {%- if page.url == tab.url %}{% assign active = true %}{% endif %}
+    <a class="page-tab{% if active %} is-active{% endif %}" href="{{ tab.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>
+      <span data-en="{{ tab.en | escape }}" data-zh="{{ tab.zh | escape }}">{{ tab.en }}</span>
+    </a>
+  {%- endfor %}
+</nav>

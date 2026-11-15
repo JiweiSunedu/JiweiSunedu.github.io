@@ -1,0 +1,94 @@
+---
+layout: jiwei-base
+---
+{%- assign i18n = site.data.jiwei_i18n -%}
+{%- assign data = site.data.jiwei_publications -%}
+{%- assign papers = data.papers | sort: 'year' | reverse -%}
+{%- assign year_groups = papers | group_by: 'year' -%}
+      <section class="page-head">
+        <h1 class="page-title" data-en="{{ i18n.publications_title.en | escape }}" data-zh="{{ i18n.publications_title.zh | escape }}">{{ i18n.publications_title.en }}</h1>
+      </section>
+
+      <div
+        class="filter-bar"
+        role="group"
+        aria-label="{{ i18n.publications_filter_label.en }}"
+        data-en-label="{{ i18n.publications_filter_label.en | escape }}"
+        data-zh-label="{{ i18n.publications_filter_label.zh | escape }}"
+      >
+        <button class="filter-chip is-active" type="button" data-field-filter="all" aria-pressed="true">
+          <span data-en="{{ i18n.publications_all.en | escape }}" data-zh="{{ i18n.publications_all.zh | escape }}">{{ i18n.publications_all.en }}</span>
+          <span class="filter-count" data-count-for="all">{{ papers | size }}</span>
+        </button>
+        {%- for field in data.fields %}
+          {%- assign field_count = 0 %}
+          {%- for paper in papers %}
+            {%- if paper.fields contains field %}{% assign field_count = field_count | plus: 1 %}{% endif %}
+          {%- endfor %}
+          <button class="filter-chip" type="button" data-field-filter="{{ field | escape }}" aria-pressed="false">
+            {{ field | escape }}
+            <span class="filter-count" data-count-for="{{ field | escape }}">{{ field_count }}</span>
+          </button>
+        {%- endfor %}
+      </div>
+
+      <div class="publication-legend" aria-label="Author role legend">
+        <span class="role-badge role-badge-first"><span class="role-mark" aria-hidden="true">1</span><span data-en="{{ i18n.role_first_author.en | escape }}" data-zh="{{ i18n.role_first_author.zh | escape }}">{{ i18n.role_first_author.en }}</span></span>
+        <span class="role-badge role-badge-cofirst"><span class="role-mark" aria-hidden="true">†</span><span data-en="{{ i18n.role_cofirst.en | escape }}" data-zh="{{ i18n.role_cofirst.zh | escape }}">{{ i18n.role_cofirst.en }}</span></span>
+        <span class="role-badge role-badge-corresponding"><span class="role-mark" aria-hidden="true">*</span><span data-en="{{ i18n.role_corresponding.en | escape }}" data-zh="{{ i18n.role_corresponding.zh | escape }}">{{ i18n.role_corresponding.en }}</span></span>
+      </div>
+
+      <div class="publication-index">
+        {%- for group in year_groups %}
+        <details class="pub-year" data-pub-year="{{ group.name }}" open>
+          <summary>
+            <span class="pub-year-label">{{ group.name }}</span>
+            <span class="pub-year-count">{{ group.items | size }}</span>
+            <span class="pub-year-toggle" aria-hidden="true"><span class="pub-year-chevron"></span></span>
+          </summary>
+          <div class="pub-year-list">
+            {%- for paper in group.items %}
+              {%- assign journal = site.data.jiwei_journal_metrics[paper.journal] %}
+              {%- assign doi_key = paper.doi | remove: 'https://doi.org/' | downcase %}
+              {%- assign citation = site.data.jiwei_citations[doi_key] %}
+              {%- assign tags = paper.fields | join: '|' %}
+              <article class="pub-entry publication" id="pub-{{ paper.id }}" data-publication-tags="{{ tags | escape }}">
+                <div class="pub-thumb">
+                  {%- if journal.cover %}
+                    <a class="journal-cover" href="{{ journal.source | escape }}" aria-label="{{ paper.journal | escape }} journal information"><img src="{{ journal.cover | relative_url }}" width="595" height="782" alt="{{ journal.cover_alt | escape }}" loading="lazy"></a>
+                  {%- endif %}
+                  {%- if paper.abbr %}<span class="pub-abbr">{{ paper.abbr | escape }}</span>{% endif %}
+                </div>
+                <div class="pub-body">
+                  <h2 class="pub-title"><a href="{{ paper.doi | escape }}">{{ paper.title | escape }}</a></h2>
+                  <p class="pub-authors">{% include jiwei_authors.liquid paper=paper marks=true %}</p>
+                  <div class="pub-top">
+                    {%- if paper.first_author %}<span class="role-badge role-badge-first"><span class="role-mark" aria-hidden="true">1</span><span data-en="{{ i18n.role_first_author.en | escape }}" data-zh="{{ i18n.role_first_author.zh | escape }}">{{ i18n.role_first_author.en }}</span></span>{% endif %}
+                    {%- if paper.cofirst %}<span class="role-badge role-badge-cofirst"><span class="role-mark" aria-hidden="true">†</span><span data-en="{{ i18n.role_cofirst.en | escape }}" data-zh="{{ i18n.role_cofirst.zh | escape }}">{{ i18n.role_cofirst.en }}</span></span>{% endif %}
+                    {%- if paper.corresponding %}<span class="role-badge role-badge-corresponding"><span class="role-mark" aria-hidden="true">*</span><span data-en="{{ i18n.role_corresponding.en | escape }}" data-zh="{{ i18n.role_corresponding.zh | escape }}">{{ i18n.role_corresponding.en }}</span></span>{% endif %}
+                  </div>
+                  <p class="pub-venue"><em>{{ paper.journal | escape }}</em>{% if paper.volume %}, {{ paper.volume | escape }}{% endif %}{% if paper.issue %}({{ paper.issue | escape }}){% endif %}{% if paper.pages %}, {{ paper.pages | escape }}{% endif %} · {{ paper.year }}</p>
+                  <div class="pub-tags">
+                    {%- for field in paper.fields %}<span class="tag">{{ field | escape }}</span>{% endfor %}
+                  </div>
+                  <div class="pub-footer">
+                    <div class="pub-links">
+                      <a href="{{ paper.doi | escape }}">DOI <span aria-hidden="true">↗</span></a>
+                      {%- if paper.html %}<a href="{{ paper.html | escape }}">HTML <span aria-hidden="true">↗</span></a>{% endif %}
+                      {%- if paper.pdf %}<a href="{{ paper.pdf | escape }}">PDF <span aria-hidden="true">↗</span></a>{% endif %}
+                    </div>
+                    <div class="paper-metrics" aria-label="Journal and article metrics">
+                      {%- if journal.impact_factor %}<a class="metric-badge" href="{{ journal.source | escape }}" title="Journal Impact Factor, {{ journal.year }}"><span>IF</span> <strong>{{ journal.impact_factor }}</strong><small>{{ journal.year }}</small></a>{% endif %}
+                      {%- if journal.quartile %}<a class="metric-badge" href="{{ journal.quartile_source | escape }}" title="{{ journal.category | escape }} — {{ journal.year }} JCR quartile"><span>{{ journal.index | escape }}</span> <strong>{{ journal.quartile | escape }}</strong><small>{{ journal.year }}</small></a>{% endif %}
+                      <span class="metric-badge citation-metric" data-doi="{{ doi_key | escape }}" data-count="{{ citation.count }}" data-checked="{{ citation.retrieved_at | escape }}" title="Crossref cited-by count"><span>Citations</span> <strong data-citation-count>{% if citation.count != nil %}{{ citation.count }}{% else %}—{% endif %}</strong><small>Crossref</small></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            {%- endfor %}
+          </div>
+        </details>
+        {%- endfor %}
+      </div>
+
+      <p class="empty-state" data-empty-state hidden data-en="{{ i18n.publications_empty.en | escape }}" data-zh="{{ i18n.publications_empty.zh | escape }}">{{ i18n.publications_empty.en }}</p>
