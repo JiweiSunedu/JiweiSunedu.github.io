@@ -90,3 +90,5 @@ role_corresponding:
 role_cofirst:
   en: Co-first author
   zh: 共同第一作者
+
+# Keys are read in _layouts/*.liquid via site.data.jiwei_i18n.
